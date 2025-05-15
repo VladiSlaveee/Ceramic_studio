@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.burger {
+    display: flex;
+    height: 23px;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-right: 35px;
+
+    span {
+        display: block;
+        border: 1px solid var(--dark);
+        width: 20px;
+        height: 0px;
+    }
+}
+
+.header__logo {
+    width: 100px;
+    height: 100px;
+}
+
+.header__icons {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 15px;
+
+    a {
+        display: block;
+        color: var(--dark);
+
+        span {
+            display: block;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

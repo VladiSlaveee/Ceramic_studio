@@ -1,5 +1,6 @@
 .btn {
     display: block;
+    padding: 0 10px;
     border: 1px solid var(--dark);
     border-radius: 2px;
     text-align: center;
@@ -7,10 +8,33 @@
     text-transform: uppercase;
     color: var(--dark);
     background-color: transparent;
+    cursor: pointer;
 }
 
 .btn-default {
     width: 230px;
     height: 50px;
     font-size: 20px;
+    transition: all 0.4s;
+}
+
+@media screen and (min-width: 1200px) {
+    .btn-default:hover {
+        color: var(--light);
+        background: var(--dark);
+    }
+
+    .btn-default:active {
+        color: var(--dark);
+        box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, 0.4);
+        background: rgba(217, 217, 217, 0.1);
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .btn-default {
+        width: 330px;
+        height: 60px;
+    }
 }

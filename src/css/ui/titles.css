@@ -6,3 +6,9 @@
     color: var(--dark);
     text-align: center;
 }
+
+@media screen and (min-width: 1920px) {
+    .promo__title {
+        font-size: 32px;
+    }
+}

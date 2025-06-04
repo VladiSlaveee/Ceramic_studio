@@ -8,7 +8,7 @@
 }
 
 .title-h2 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 32px;
     text-transform: uppercase;
     color: var(--dark);
@@ -16,7 +16,7 @@
 }
 
 .title-h3 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 20px;
     text-transform: uppercase;
     color: var(--dark);

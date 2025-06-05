@@ -149,7 +149,6 @@
     }
 
     .git__wrapper {
-        display: flex;
         column-gap: 147px;
     }
 

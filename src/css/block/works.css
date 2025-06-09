@@ -1,5 +1,6 @@
 .works {
     padding-top: 60px;
+    padding-bottom: 95px;
 
     .swiper-pagination {
         bottom: -35px;
@@ -27,11 +28,6 @@
     img {
         width: 100%;
     }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    display: none;
 }
 
 .works__slider-nav {
@@ -104,6 +100,7 @@
 @media screen and (min-width: 1920px) {
     .works {
         padding-top: 100px;
+        padding-bottom: 130px;
     }
 
     .works__slider {
@@ -118,5 +115,4 @@
     .icon-right-open {
         right: 40px;
     }
-
 }

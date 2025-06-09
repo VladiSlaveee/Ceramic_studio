@@ -26,6 +26,18 @@
     transition: all 0.4s;
 }
 
+.footer__btn {
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--light);
+    border: 1px solid var(--light);
+    border-radius: 2px;
+    width: 90px;
+    height: 40px;
+    margin-top: 20px;
+}
+
 @media screen and (min-width: 1200px) {
     .btn-default:hover {
         color: var(--light);
@@ -55,6 +67,11 @@
     }
 
     .req-form__button:disabled {
+        color: var(--ui-disabled);
+        border: 1px solid var(--ui-disabled);
+    }
+
+    .footer__btn:disabled {
         color: var(--ui-disabled);
         border: 1px solid var(--ui-disabled);
     }

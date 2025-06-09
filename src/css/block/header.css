@@ -53,6 +53,7 @@
     height: 100vh;
     background-color: var(--light);
     transition: transform 0.4s;
+    z-index: 100;
 
 }
 

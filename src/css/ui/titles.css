@@ -7,7 +7,8 @@
     text-align: center;
 }
 
-.title-h2 {
+.title-h2,
+.title-h1 {
     font-weight: 500;
     font-size: 32px;
     text-transform: uppercase;
@@ -24,7 +25,9 @@
 }
 
 @media screen and (min-width: 768px) {
-    .title-h2 {
+
+    .title-h2,
+    .title-h1 {
         font-size: 36px;
     }
 
@@ -34,7 +37,9 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .title-h2 {
+
+    .title-h2,
+    .title-h1 {
         font-size: 40px;
     }
 }

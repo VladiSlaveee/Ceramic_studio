@@ -19,12 +19,18 @@ footer {
         .footer__item_social {
             display: flex;
             margin-top: 40px;
-            column-gap: 3px;
+            column-gap: 10px;
 
             a {
                 text-decoration: none;
                 color: var(--light);
-                font-size: 20px;
+                font-size: 24px;
+
+                .icon-facebook::before,
+                .icon-pinterest-circled:before,
+                .icon-instagram:before {
+                    margin: 0;
+                }
             }
         }
 

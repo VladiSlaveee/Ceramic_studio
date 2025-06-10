@@ -1,0 +1,128 @@
+.blog {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.blog__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.blog__title {
+    margin-top: 60px;
+}
+
+.blog__title-h3 {
+    text-align: left;
+}
+
+.blog__card {
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+    background: var(--light);
+    border: 1px solid var(--dark);
+}
+
+.blog__data-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 25px 0 25px;
+}
+
+.blog__text {
+    margin-top: 25px;
+    padding: 0 25px 25px 25px;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark);
+}
+
+.blog__img {
+    max-inline-size: calc(100% + 2px);
+    transform: translateX(-1px) translateY(-1px);
+    height: 240px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .blog__wrapper {
+        position: relative;
+        padding: 0 25px;
+        margin-top: 85px;
+    }
+
+    .blog__wrapper::after {
+        content: '';
+        position: absolute;
+        background-color: var(--dark);
+        width: 1px;
+        height: 200px;
+        left: 0px;
+        top: -25px;
+
+    }
+
+    .blog__wrapper::before {
+        content: '';
+        position: absolute;
+        background-color: var(--dark);
+        width: 200px;
+        height: 1px;
+        top: -25px;
+        left: 0px;
+    }
+
+    .blog__data-column {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    .blog__text {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .blog__wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+        align-items: flex-start;
+    }
+
+    .blog__card {
+        width: 520px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .blog__img {
+        width: 260px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .blog {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    .blog__title {
+        margin-top: 100px;
+    }
+
+    .blog__wrapper {
+        align-items: normal;
+    }
+
+    .blog__card {
+        width: 670px;
+    }
+
+    .blog__img {
+        width: 335px;
+    }
+}

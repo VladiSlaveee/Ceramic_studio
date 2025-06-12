@@ -1,6 +1,6 @@
 import "purecss/build/grids-min.css";
 import "purecss/build/grids-responsive-min.css";
-
+import JustValidate from 'just-validate';
 
 
 import Swiper from 'swiper';
@@ -10,6 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "/src/css/style.css";
+
 
 const burger = document.querySelector(".burger"),
     close = document.querySelector(".header__menu-close"),
@@ -73,6 +74,108 @@ try {
 } catch (e) { }
 
 // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
+
+try {
+    const validatorA = new JustValidate('.req-form');
+    validatorA
+        .addField('#name', [
+            {
+                rule: 'required',
+                errorMessage: 'Please fill the name'
+            },
+            {
+                rule: 'minLength',
+                value: 2,
+            },
+        ])
+        .addField('#email', [
+            {
+                rule: 'required',
+                errorMessage: 'Please fill the email'
+            },
+            {
+                rule: 'email',
+            },
+        ])
+        .addField('#question', [
+            {
+                rule: 'required',
+                errorMessage: 'Please fill the question'
+            },
+            {
+                rule: 'minLength',
+                value: 5,
+            },
+        ])
+        .addField('#agree', [
+            {
+                rule: 'required',
+            },
+        ],
+            {
+                errorsContainer: document.querySelector('#agree').parentElement.parentElement.querySelector('.checkbox-error-message'),
+            }
+        )
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            fetch("https://httpbin.org/post", {
+                method: "POST",
+                body: formData,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Success", data);
+                    form.reset();
+                });
+        });
+    //Отправка формы тестовое
+
+} catch (e) { }
+
+try {
+    const validatorFooter = new JustValidate('.footer__form');
+    validatorFooter
+        .addField('#footer__email', [
+            {
+                rule: 'required',
+                errorMessage: 'Please fill the email'
+            },
+            {
+                rule: 'email',
+            },
+        ],
+            {
+                errorsContainer: document.querySelector('#footer__email').parentElement.querySelector('.footer__email-error-message'),
+            }
+        )
+        .addField('#footer__agree', [
+            {
+                rule: 'required',
+            },
+        ],
+            {
+                errorsContainer: document.querySelector('#footer__agree').parentElement.parentElement.querySelector('.footer__checkbox-error-message'),
+            }
+
+        )
+        .onSuccess((event) => {
+            const form = event.currentTarget;
+            const formData = new FormData(form);
+
+            fetch("https://httpbin.org/post", {
+                method: "POST",
+                body: formData,
+            })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log("Success", data);
+                    form.reset();
+                });
+        });
+    //Отправка формы тестовое
+} catch (e) { }
 
 
 

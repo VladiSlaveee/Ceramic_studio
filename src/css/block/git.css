@@ -1,5 +1,10 @@
 .git {
     padding-top: 60px;
+
+    .just-validate-error-field {
+        border: 1px solid var(--ui-error);
+        outline: none;
+    }
 }
 
 .git__wrapper {
@@ -52,7 +57,7 @@
     }
 
 
-    #question {
+    textarea {
         height: 132px;
         text-align: start;
         padding-bottom: 94px;
@@ -61,6 +66,11 @@
         padding: 10px 15px;
         resize: none;
         outline: none;
+
+        .just-validate-error-field {
+            border: 1px solid var(--ui-error);
+            outline: none;
+        }
     }
 
     #question::placeholder {
@@ -170,6 +180,11 @@
     }
 
     .req-form__button {
+        grid-column-start: 1;
+        grid-row-start: 4;
+    }
+
+    .checkbox-error-message {
         grid-column-start: 1;
         grid-row-start: 4;
     }

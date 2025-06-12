@@ -66,6 +66,10 @@
         padding-left: 571px;
 
     }
+
+    .promo__cta {
+        animation: slideIn 1.5s ease-in;
+    }
 }
 
 @media screen and (min-width: 1920px) {

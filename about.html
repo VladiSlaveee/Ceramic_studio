@@ -102,19 +102,29 @@
                         </div>
                         <div class="req-form__group"><label for="question">Your question</label>
                             <textarea id="question" name="question" required placeholder="Question" type="text"
-                                class="req-form__input">
-    							</textarea>
+                                class="req-form__input"></textarea>
                         </div>
 
                         <div class="checkbox-group">
                             <input type="checkbox" id="agree" name="agree" required>
                             <label for="agree">I agree with the<a href="#"> terms</a></label>
                         </div>
+                        <div class="checkbox-error-message"></div>
                         <button class="req-form__button btn">send request</button>
                     </form>
                 </div>
             </div>
             <div class="git__vase"><img src="/src/img/form/vase.png" alt="vase"></div>
+        </div>
+    </section>
+    <section class="findus">
+        <div class="container">
+            <h2 class="title-h2">find us</h2>
+            <div class="findus__wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4999.844307656685!2d-73.95140262109143!3d40.72840826262176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2593c58f8777d%3A0xe2215ac687bd7249!2sCLAY%20SPACE%20Ceramic%20Center!5e1!3m2!1sru!2sby!4v1749719690097!5m2!1sru!2sby"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
     </section>
     <footer>
@@ -125,10 +135,12 @@
                     <form action="#" class="footer__form">
                         <label for="footer__email">Keep up to date with news and promotions</label>
                         <input id="footer__email" name="email" type="email" required placeholder="Enter your e-mail">
+                        <div class="footer__email-error-message"></div>
                         <div class="checkbox-group">
                             <input type="checkbox" id="footer__agree" name="agree" required>
                             <label for="footer__agree">I agree with the<a href="#"> terms</a></label>
                         </div>
+                        <div class="footer__checkbox-error-message"></div>
                         <button class="btn footer__btn">submit</button>
                     </form>
                 </div>

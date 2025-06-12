@@ -44,6 +44,15 @@ footer {
     .footer__form {
         margin-top: 40px;
 
+        .just-validate-error-field {
+            border-bottom: 1px solid var(--ui-error);
+            outline: none;
+        }
+
+        .just-validate-error-field::placeholder {
+            color: var(--ui-error)
+        }
+
         label {
             display: block;
             font-weight: 400;
@@ -61,6 +70,16 @@ footer {
             border-bottom: 1px solid var(--ui-active);
             color: var(--light);
             padding-bottom: 15px;
+
+
+
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus {
+            -webkit-text-fill-color: var(--light);
+            -webkit-box-shadow: 0 0 0px 40rem #232323 inset;
         }
 
         input::placeholder {
@@ -136,6 +155,10 @@ footer {
     }
 }
 
+.footer__checkbox-error-message {
+    margin-top: 8px;
+}
+
 @media screen and (min-width: 1200px) {
     footer {
         .footer__wrapper {
@@ -148,14 +171,14 @@ footer {
             margin-top: 50px;
         }
     }
-}
 
-@media screen and (min-width: 1920px) {
-    footer {
-        padding-top: 80px;
+    @media screen and (min-width: 1920px) {
+        footer {
+            padding-top: 80px;
 
-        .footer__right {
-            margin-top: 20px;
+            .footer__right {
+                margin-top: 20px;
+            }
         }
     }
 }

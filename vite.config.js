@@ -19,8 +19,9 @@ export default defineConfig({
 			},
 			output: {
 				// Отключаем хэши в именах файлов
-				assetFileNames: 'assets/[name].[ext]', // Будет style.css вместо style-XXXXX.css
-				entryFileNames: 'assets/[name].js',
+				assetFileNames: 'assets/[name].[ext]', // Будет style.css, а не style-XXXXX.css
+				entryFileNames: 'assets/[name].js',    // Будет script.js, а не script-XXXXX.js
+				chunkFileNames: 'assets/[name].js',    // Для чанков (если есть)
 			}
 		},
 	},

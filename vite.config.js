@@ -17,6 +17,11 @@ export default defineConfig({
 				blog: "blog.html",
 				about: "about.html",
 			},
+			output: {
+				// Отключаем хэши в именах файлов
+				assetFileNames: 'assets/[name].[ext]', // Будет style.css вместо style-XXXXX.css
+				entryFileNames: 'assets/[name].js',
+			}
 		},
 	},
 	plugins: [

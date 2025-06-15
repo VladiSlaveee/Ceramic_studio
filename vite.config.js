@@ -17,6 +17,11 @@ export default defineConfig({
 				blog: "blog.html",
 				about: "about.html",
 			},
+			output: {
+				assetFileNames: 'assets/[name].[ext]', // Будет script.js вместо script-XXX.js
+				entryFileNames: 'assets/[name].js',
+				chunkFileNames: 'assets/[name].js'
+			}
 		},
 	},
 	plugins: [

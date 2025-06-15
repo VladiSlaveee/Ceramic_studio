@@ -8,7 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 
 export default defineConfig({
-	base: '/',
+	base: '/Ceramic_studio/',
 	build: {
 		rollupOptions: {
 			input: {
@@ -17,11 +17,6 @@ export default defineConfig({
 				blog: "blog.html",
 				about: "about.html",
 			},
-			output: {
-				// Отключаем хэши в именах файлов
-				assetFileNames: 'assets/[name].[ext]', // Будет style.css вместо style-XXXXX.css
-				entryFileNames: 'assets/[name].js',
-			}
 		},
 	},
 	plugins: [
